@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="/style/style.css">
+
+    <!-- BOOTSTRAP STYLE -->
+    <link rel="stylesheet" href="/bootstrapStyle/bootstrap.min.css">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="/bootstrapIcons/bootstrap-icons.css">
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="/bootstrapScript/bootstrap.bundle.min.js"></script>
+
+    <!-- JQUERY SCRIPT -->
+    <script src="/jQuery/dist/jquery.min.js"></script>
+
+    <title>Postagens</title>
+</head>
+
+<body class="body">
+
+    <!--Início da NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">POSTS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#posts">Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cad">Cadastrar Posts</a>
+                    </li>
+                    <!--li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li-->
+                </ul>
+
+                <form class="d-flex" action="/pesquisar" method="get">
+                    <div class="input-group mb-3">
+                        <input type="search" class="form-control" placeholder="Digite o Título do post"
+                            aria-label="Digite o Título do post" aria-describedby="button-addon2" name="termo" required>
+                        <button class="btn btn-outline-success" type="submit" id="button-addon2"><i class="bi bi-binoculars-fill"></i> Pesquisar</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </nav>
+    <!--Fim da NAVBAR-->
+
+
+
+    {{{body}}}
+
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-white text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Aqui inicia o Rodapé do site:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3 text-secondary"></i>Técnicas de Programação II
+                        </h6>
+                        <p>
+                            Este site foi desenvolvido na aula de Técnicas de programação de computadores dia 14/04/2023
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Páginas
+                        </h6>
+                        <p>
+                            <a href="/" class="text-reset">HOME</a>
+                        </p>
+                        <p>
+                            <a href="/cad" class="text-reset">Cadastrar Post</a>
+                        </p>
+                        <p>
+                            <a href="/#posts" class="text-reset">Posts</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Posts
+                        </h6>
+                        {{#each posts}}
+                        <p>
+                            <a href="/#posts" class="text-reset">{{titulo}}</a>
+                        </p>
+                        {{/each}}
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
+                        <p><i class="fas fa-home me-3 text-secondary"></i> FATEC COTIA</p>
+                        <p>
+                            <i class="fas fa-envelope me-3 text-secondary"></i>
+                            fatec@tp2.dev.br
+                        </p>
+                        <p><i class="fas fa-phone me-3 text-secondary"></i> + 55 (11) 1234-5436</p>
+                        <p><i class="fas fa-print me-3 text-secondary"></i> + 55 (11) 9 7654-7865</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="#">tp2.dev.br</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+.body {
+    background-color: aliceblue;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+/* BANNER */
+
+.carousel-inner .carousel-item {
+
+    position: relative;
+    width: 100%;
+    padding-top: 18%;
+    padding-bottom: 18%;
+}
+
+.carousel-inner .carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    background-color: black;
+    filter: brightness(0.4);
+}
+
+
+/* Imagens do formulário de cadastro */
+#picture-input {
+    display: none;
+}
+
+.picture {
+
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentColor;
+    cursor: pointer;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
+    outline: 2px solid #fff;
+}
+
+.picture:hover {
+    color: #999;
+    background: #ccc;
+}
+
+.picture:active {
+    color: #333;
+    background: antiquewhite;
+}
+
+.picture:focus {
+    border-color: #333;
+    color: #333;
+    background: #eee;
+    box-shadow: 0 0 10px #333;
+}
+
+.picture-img {
+    max-width: 100%;
+}
