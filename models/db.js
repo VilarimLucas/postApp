@@ -13,15 +13,15 @@ Port number: 3306
 
 const Sequelize = require('sequelize');
 
-/* Conexão com o banco de dados
+// Conexão com o banco de dados
 const sequelize = new Sequelize('sql10615532', 'sql10615532', 'BN4RMrejfq', {
     host: 'sql10.freemysqlhosting.net',
     port: "3306",
     dialect: 'mysql'
 });
-*/
 
-// Conexão com o banco de dados utilizando as variáveis do VERCEL
+
+/* Conexão com o banco de dados utilizando as variáveis do VERCEL
 
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
     host: process.env.DB_HOST,
@@ -29,7 +29,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
     dialect: 'mysql'
 });
 
-
+*/
 
 
 //Vamos exportar as variáveis
