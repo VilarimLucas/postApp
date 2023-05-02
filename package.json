@@ -11,6 +11,6 @@
     "sequelize": "^6.31.0"
   },
   "scripts": {
-    "start": "npx nodemon index.js"
+    "dev": "npx nodemon index.js"
   }
 }
