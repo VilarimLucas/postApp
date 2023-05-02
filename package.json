@@ -12,6 +12,6 @@
   },
   "scripts": {
     "dev": "npx nodemon index.js",
-    "vercel-build":"npx prisma migrate deploygit add"
+    "vercel-build":"npx prisma migrate deploy"
   }
 }
